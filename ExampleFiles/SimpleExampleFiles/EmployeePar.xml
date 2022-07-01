@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Employee_Info
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="employee.xs">
+  <Employee  Employee_Number="XYX01">
+    <Name>XYX02</Name>
+    <Department>XYX03</Department>
+    <Telephone>XYX04</Telephone>
+    <Email>XYX05</Email>
+  </Employee>
+</Employee_Info>
