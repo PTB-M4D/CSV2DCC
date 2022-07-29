@@ -34,7 +34,8 @@ public class CSV2DCC2 {
 	
 	// private static Map subsTable;					// P
 	private static TreeMap<String, String> subsTable;	// P
-	private static Map subsCount;	//M
+	// private static Map subsCount;	//P
+	private static TreeMap<String, Integer> subsCount;	// P
 	
 	public CSV2DCC2()
 	{
@@ -44,9 +45,10 @@ public class CSV2DCC2 {
 	public int Go() throws ParserConfigurationException, SAXException, IOException, TransformerException
 	{
 		// Create map		
-		subsTable = new TreeMap();
-		subsCount = new TreeMap();
-		TreeMap<String, Integer> subsCount2 = new TreeMap<String, Integer>();
+		// subsTable = new TreeMap();					// P
+		subsTable = new TreeMap<String, String>();		// P
+		// subsCount = new TreeMap();					// P
+		subsCount = new TreeMap<String, Integer>();		// P
 		
 		// Read through CSV
 	    
@@ -79,8 +81,8 @@ public class CSV2DCC2 {
 		        // Store information in Map table
 				subsTable.put(current_Record[0], current_Record[1]);
 				// Set up count table									//M
-				subsCount.put(current_Record[0], "0");					//M
-		        
+				// subsCount.put(current_Record[0], "0");					//P
+				subsCount.put(current_Record[0], 0);					// P
 		        
 		        // The record index variable, x is incremented in every loop. 
 		        x = x + 1;
@@ -132,9 +134,12 @@ public class CSV2DCC2 {
 
 	     System.out.println("Done creating XML File");	    
 	     
-	     subsCount.forEach((key, value)->System.out.println(
-	                "Code : " + key + "\t\t\t"
-	                        + "Replacements : " + value));
+	     // subsCount.forEach((key, value)->System.out.println(
+	     //            "Code : " + key + "\t\t\t"
+	     //                    + "Replacements : " + value));
+	     subsCount.forEach((key, value)->System.out.println(					// P
+	                 "Code : " + key + "\t\t\t"									// P
+	                         + "Replacements : " + String.valueOf(value)));		// P
 		
 		return 0;		// Replace 0 with suitable return code
 	}
@@ -197,13 +202,20 @@ public class CSV2DCC2 {
 					
 					//// Update the relevant subsCount table item				//M
 					// Get current value										//M
-					String strcount = String.valueOf(subsCount.get(aname));		//m	
+					// String strcount = String.valueOf(subsCount.get(aname));		//m	
 					
 					// Update the string "+1" and replace in subsCount
-					int icount = Integer.valueOf(strcount);		//m
-					icount++;									//m
-					strcount = String.valueOf(icount);			//m
-					subsCount.put(aname, strcount);		//m
+					// int icount = Integer.valueOf(strcount);		//m
+					// icount++;									//m
+					// strcount = String.valueOf(icount);			//m
+					// subsCount.put(aname, strcount);		//m
+					
+					//// Update the relevant subsCount table item				// P
+					// Get current value										// P
+					Integer count = Integer.valueOf(subsCount.get(aname));		// P
+					count++;													// P
+					subsCount.put(aname,  count);								// P
+					
 					
 				}
 										
@@ -236,14 +248,20 @@ public class CSV2DCC2 {
 												
 						//// Update the relevant subsCount table item				//M
 						// Get current value										//M
-						String strcount = String.valueOf(subsCount.get(nodeString));			//M
+						// String strcount = String.valueOf(subsCount.get(nodeString));			//M
 
 						// Update the string "+1" and replace in subsCount
-						int icount = Integer.valueOf(strcount);		//m
-						icount++;									//m
-						strcount = String.valueOf(icount);			//m
-						subsCount.put(nodeString, strcount);		//m
+						// int icount = Integer.valueOf(strcount);		//m
+						// icount++;									//m
+						// strcount = String.valueOf(icount);			//m
+						// subsCount.put(nodeString, strcount);		//m
 
+						//// Update the relevant subsCount table item				// P
+						// Get current value										// P
+						Integer count = Integer.valueOf(subsCount.get(nodeString));		// P
+						count++;													// P
+						subsCount.put(nodeString,  count);								// P					
+						
 					}
 					
 					// printTree(children.item(i));
