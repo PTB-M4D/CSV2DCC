@@ -23,7 +23,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 // This version now includes a logfile output which shows which substitutions have been done
-// THis has not been implemented yet so this is exactly CSV2DCC at the moment
+// TreeMap definitions have been refined
 
 public class CSV2DCC2 {
 	
@@ -32,7 +32,8 @@ public class CSV2DCC2 {
 	public String parFileString;
 	public String outFileString;
 	
-	private static Map subsTable;
+	// private static Map subsTable;					// P
+	private static TreeMap<String, String> subsTable;	// P
 	private static Map subsCount;	//M
 	
 	public CSV2DCC2()
@@ -45,6 +46,7 @@ public class CSV2DCC2 {
 		// Create map		
 		subsTable = new TreeMap();
 		subsCount = new TreeMap();
+		TreeMap<String, Integer> subsCount2 = new TreeMap<String, Integer>();
 		
 		// Read through CSV
 	    
