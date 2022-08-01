@@ -1,6 +1,6 @@
 # CSV2DCC 
 
-The purpose of the CSV2DCC application is to embed metrology data held within a CSV (actually a semicolon separated) file into a Digital Calibration Certifcate (DCC) XML file. It is expected that this application will be of use in the generation of DCCs in the production environmennt.
+The purpose of the CSV2DCC application is to embed metrology data held within a CSV (actually a semicolon separated) file into a Digital Calibration Certifcate (DCC) XML file. It is expected that this application will be of use in the generation of DCCs in the production environment.
 
 To use CSV2DCC, the User will first need to prepare a DCC that is suitable for their work, this will be the "Input DCC" for the CSV2DCC application.
 
