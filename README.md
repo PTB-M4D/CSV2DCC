@@ -28,6 +28,8 @@ The purpose of the CSV2DCC application is to copy calibration result information
 UK representation	 	1,200,300.456
 </p>
 
+
+
 <p align="justify">
 Deutsch representation		1.200.300,456
 </p>
@@ -37,4 +39,40 @@ Deutsch representation		1.200.300,456
 </p>  
 
 ## Installation
+
+<p align="justify">
+Please refer to the release section of this repository for full instructions on how to install CSV2DCC.
+</p>  
+
+## How to use CSV2DCC
+
+<p align="justify">
+<b>Please Note:-</b> The example files used in this document are available in the “ExamplesFIles” folder, under “SimpleExampleFiles” so you do not need to create these files, in order to start using the application. There is also a Temperature DCC example (Parameterised and Substitution files) stored under “TemperatureExample”. 
+</p>  
+
+<p align="justify">
+In order to explain the principles of how to use the CSV2DCC application a very small XML file will be used as an example. 
+</p>
+
+<p align="justify">
+Consider the following example xml file
+</p>
+
+
+```
+<?xml version="1.0"?>
+<Employee_Info
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="employee.xs">
+  <Employee  Employee_Number="105">
+    <Name>Masashi Okamura</Name>
+    <Department>Design Department</Department>
+    <Telephone>03-1452-4567</Telephone>
+    <Email>okamura@xmltr.co.jp</Email>
+  </Employee>
+</Employee_Info>
+
+```
+
+
 
