@@ -13,3 +13,28 @@ Once the Input DCC has been generated, please refer to the "CSV2DCC User Guide" 
 The working pre-release version section of this site contains information on how to set CSV2DCC up on a windows PC running JRE 1.8 or later.
 
 # CSV2DCC User Guide
+
+## Introduction
+
+<p align="justify">
+The purpose of the CSV2DCC application is to copy calibration result information from a CSV file* into the relevant places within a DCC template. The application has been written to be applicable to all types of XML type DCC file.
+</p>
+
+<p align="justify">
+* Actually a semi-colon separated file will be used to avoid regional specific use of commas and decimal points across Europe. For example
+</p>
+
+<p align="justify">
+UK representation	 	1,200,300.456
+</p>
+
+<p align="justify">
+Deutsch representation		1.200.300,456
+</p>
+
+<p align="justify">
+<b>Important Note:-</b> If every DCC you generate (excluding the results) is unique, with differing structure and length, then CSV2DCC in its current version is unlikely to be of use. to you.  If you generate many DCCs with the same structure (but differing results) then CSV2DCC will probably be of use to you. 
+</p>  
+
+## Installation
+
