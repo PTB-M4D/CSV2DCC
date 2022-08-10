@@ -11,3 +11,5 @@ To generate the Input DCC, please refer to the core DCC documentation at https:/
 Once the Input DCC has been generated, please refer to the "CSV2DCC User Guide" for instructions on how to create a Parameterised version of the Input DCC, and how to create the CSV (semicolon separated) file which will contain the metrology information to be embedded into the DCC.
 
 The working pre-release version section of this site contains information on how to set CSV2DCC up on a windows PC running JRE 1.8 or later.
+
+# CSV2DCC User Guide
