@@ -12,6 +12,8 @@ Once the Input DCC has been generated, please refer to the "CSV2DCC User Guide" 
 
 The working pre-release version section of this site contains information on how to set CSV2DCC up on a windows PC running JRE 1.8 or later.
 
+The first release of CSV2DCC can be found at https://github.com/PTB-M4D/CSV2DCC/releases/tag/v0.1.0
+
 # CSV2DCC User Guide
 
 ## Introduction
