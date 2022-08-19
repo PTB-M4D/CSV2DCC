@@ -164,6 +164,9 @@ In Column B, put all the relevant data as shown in the example below in Figure 2
 
 ![Image 1](.\docs\Img1.png?raw=true)
 
+
+<img src=".\docs\Img1.png" alt="Image1" title="Figure 1">
+
 <p align="justify">
 Figure 1. An example Substitution File
 </p>
