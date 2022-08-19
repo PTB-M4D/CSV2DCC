@@ -159,11 +159,8 @@ In a new "sheet" in your spreadsheet application, in Column A list all the codes
 </p>
 
 <p align="justify">
-In Column B, put all the relevant data as shown in the example below in Figure 2.
+In Column B, put all the relevant data as shown in the example below in Figure 1.
 </p>
-
-![Image 1](.\docs\Img1.png?raw=true)
-
 
 <img src=".\docs\Img1.png" alt="Image1" title="Figure 1">
 
@@ -171,5 +168,27 @@ In Column B, put all the relevant data as shown in the example below in Figure 2
 Figure 1. An example Substitution File
 </p>
 
+<p align="justify">
+Please note that the entries in column B must all be text (XML files are by definition all text). It is necessary to 'force' Excel (or whichever application you are using) to treat numbers as text. This is done by placing an apostrophe (') in front of the number as shown in the figure 1 above. So instead of 105 the B1 cell contains '105.
+</p>
 
+<p align="justify">
+You can easily see if an entry is being treated as a number (and not text) if it appears on the right hand side of the cell that contains it. So to check your file, simply scan down the Column B containing the substitution text and make sure all entries start from on the left hand side of the cell, as in the example above.
+</p>
+
+<p align="justify">
+We'll save this as EmployeeSubs.csv. As was mentioned above, we need to actually use semicolons ";" as the separator and not commas. See Appendix B for instructions on how to do this if you need to.
+</p>
+
+## Step 3. Running the application CSV2DCC
+
+<p align="justify">
+Now we are ready to use CSV2DCC. If you haven't done so already, please follow the instructions in Appendix B to install the application on a Windows PC.
+</p>
+
+<p align="justify">
+Start the application by opening windows explorer, navigate to the folder where you installed the application and double click on CSV2DCC.bat. The screen in figure 2 will appear.
+</p>
+
+<img src=".\docs\Img2.png" alt="Image2" title="Figure 2">
 
