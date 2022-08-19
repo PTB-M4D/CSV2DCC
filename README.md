@@ -190,5 +190,78 @@ Now we are ready to use CSV2DCC. If you haven't done so already, please follow t
 Start the application by opening windows explorer, navigate to the folder where you installed the application and double click on CSV2DCC.bat. The screen in figure 2 will appear.
 </p>
 
-<img src=".\docs\Img2.png" alt="Image2" title="Figure 2">
+<img src=".\docs\Img2.PNG" alt="Image2" title="Figure 2">
+
+<p align="justify">
+Figure 2. CSV2DCC - Main Screen
+</p> 
+
+<p align="justify">
+Use the first two yellow "Browse" buttons to individually select the CSV file (EmployeeSubs.csv), and the parameter file (EmployeePar.xml). 
+</p>
+
+<p align="justify">
+Using the 3rd yellow "Browse" button navigate to where you want the output to be saved and provide a name for the output file, e.g. "EmployeeDataOut.XML". You can select a file that already exists (Careful! not to overwrite the parameter file - there will be a warning but the application will not stop the parameter file from being overwritten).
+</p>
+
+<p align="justify">
+Now click on the "Generate" green button and, if all goes well, you should receive a message telling you that the output file was created.
+
+<p align="justify">
+Use your preferred XML viewer (e.g. MS Edge) to open the newly created XML file (e.g. "EmployeeDataOut.XML"). You should see that the original data has now been put back into the XML file. 
+</p>
+
+<p align="justify">
+So far we have not seen CSV2DCC do anything useful. All we have done is reproduce the original file, not very useful.
+</p>
+
+<p align="justify">
+But now we can edit the substitution file (EmployeeSubs.csv), by putting new data into this file. So edit the data in EmployeeSubs.CSV, make changes to the contents of Column B which contains the data and save this as EmployeeSubs2.CSV. Rerun CSV2DCC using this second version of the substitution file and this time the output will use the new information in the CSV file. Again open the output file to confirm your data has been added to the output file.
+</p>
+
+## How can CSV2DCC be used in practice?
+
+<p align="justify">
+To actually use CSV2DCC in practice:
+
+<p align="justify">
+1. Develop a relevant DCC for your area of work (which will probably contain example data).
+</p>
+
+<p align="justify">
+2. When you have an individual DCC file that is suitable, create a Parameterised version of this xml file replacing all the example data with codes (as described in Step 1 ).
+</p>
+
+<p align="justify">
+3. In your current spreadsheet file that generates your results (assuming you use a spreadsheet application in your current process)  add a new sheet, call it "CSVOutput" for example, and add the codes that we used in Step 2 into Column A. In Column B of the CSVOutput sheet, you will need to develop the Excel to create the relevant data. Hopefully this will just be a matter of copying/linking information from other sheets in your spreadsheet, but this is very implementation dependent. 
+</p>
+
+<p align="justify">
+4. 'Run' your process spreadsheet to ensure that the correct data is put into Column B of the CSVOutput sheet. Confirm that this has worked.
+</p>
+
+<p align="justify">
+5. Run the Excel export wizard to output the CSVOutput sheet to create a CSV (actually semicolon separated) file.
+</p>
+
+<p align="justify">
+6. Run CSV2DCC using the above parameterised DCC file and the CSV file to create an output DCC.
+</p>
+
+## I do not use a Spreadsheet, can I still use CSV2DCC?
+
+<p align="justify">
+Although many metrology practitioners use a spreadsheet to process raw data to create the final results, not everyone does.
+</p>
+
+<p align="justify">
+You may instead use custom software to generate your results. If this is the case, in principle it is possible to add functionality to a custom implementation to output a CSV file. Please contact your local software engineer or provider to discuss this option.  This document should provide the developer with enough information to implement the necessary additional functionality to output a CSV file containing the relevant information. 
+</p>
+
+
+
+
+
+
+
 
