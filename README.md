@@ -76,5 +76,51 @@ Consider the following example xml file
 
 ```
 
+<p align="justify">
+Script 1. A basic XML file containing data
+</p>
+
+<p align="justify">
+Although there is only a small amount data, this XML file is complete and for the purposes of demonstrating how CSV2DCC works is adequate. 
+</p>
+
+<p align="justify">
+We now show how to use the CSV2DCC application in 3 steps (not quite to heaven but as close as we can get! :o) ).
+</p>
+
+## Step 1. Create a Parameterised XML DCC file
+
+<p align="justify">
+First we need to convert this example into a parameterised version as described below.
+</p>
+
+<p align="justify">
+We will replace all items of data with separate codes, as shown below in Script 2. By comparing Script 1 and Script 2 you will see that all data in the elements has been replaced with a code; and also the single example of an attribute "Employee_Number" with data (105) has also been replaced.  Let's call this file "EmployeePar.xml". It is recommended that "Par" is placed in the filename to indicate this is a parameterised file. (CSV2DCC will check to see that a parameter file includes the string "par" in the filename). Doing this makes it easier to see which files are the Parameterised versions.
+</p>
+
+```
+<?xml version="1.0"?>
+<Employee_Info
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="employee.xs">
+  <Employee  Employee_Number="XYX01">
+    <Name>XYX02</Name>
+    <Department>XYX03</Department>
+    <Telephone>XYX04</Telephone>
+    <Email>XYX05</Email>
+  </Employee>
+</Employee_Info>
+```
+
+<p align="justify">
+Script 2. The basic file with the data replaced with codes creating a Parameterised version.
+</p>
+
+<p align="justify">
+Each code consists of a Stub "XYX" and an incremented digit. The stub was chosen so that it is unique in the file. You can (and should) use any stub you like. Choose a stub where the sequence of letters does not appear anywhere in the original file.
+</p>
+
+
+
 
 
