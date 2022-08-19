@@ -162,7 +162,7 @@ In a new "sheet" in your spreadsheet application, in Column A list all the codes
 In Column B, put all the relevant data as shown in the example below in Figure 2.
 </p>
 
-![Image 1](docs\Img1.png)
+![Image 1](.\docs\Img1.png?raw=true)
 
 <p align="justify">
 Figure 1. An example Substitution File
