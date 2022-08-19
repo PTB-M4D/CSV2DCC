@@ -120,7 +120,47 @@ Script 2. The basic file with the data replaced with codes creating a Parameteri
 Each code consists of a Stub "XYX" and an incremented digit. The stub was chosen so that it is unique in the file. You can (and should) use any stub you like. Choose a stub where the sequence of letters does not appear anywhere in the original file.
 </p>
 
+<p align="justify">
+The stub text can be any length and the incrementing digit sequence can be as long as required. So for example,
+</p>
 
+<p align="justify">
+XYZYLPLMHBYGX0000000019
+</p>
+
+<p align="justify">
+will work, but obviously probably not necessary as this will increase the amount of typing required and the increase the chance of making a typing mistake. Choose a length that works for you.
+</p>
+
+<p align="justify">
+<b>Note:-</b> If you have a sequence of data in an element, say
+</p>
+
+```
+<Promotion_Dates>1971  1980  1995</Promotion_Dates)
+```
+
+<p align="justify">
+Simply replace the whole sequence with a single code e.g.
+</p>
+
+```
+<Promotion_Dates>XYX55</Promotion_Dates)
+```
+
+## Step 2. Create a Data Substitution CSV file
+
+<p align="justify">
+We now need to create the substitution CSV file using "Excel" or "LibreCalc" or any similar spreadsheet application.
+</p>
+
+<p align="justify">
+In a new "sheet" in your spreadsheet application, in Column A list all the codes you used in the parameterised XML file.
+</p>
+
+<p align="justify">
+In Column B, put all the relevant data as shown in the example below in Figure 2.
+</p>
 
 
 
