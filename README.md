@@ -177,13 +177,13 @@ You can easily see if an entry is being treated as a number (and not text) if it
 </p>
 
 <p align="justify">
-We'll save this as EmployeeSubs.csv. As was mentioned above, we need to actually use semicolons ";" as the separator and not commas. See Appendix B for instructions on how to do this if you need to.
+We'll save this as EmployeeSubs.csv. As was mentioned above, we need to actually use semicolons ";" as the separator and not commas. See Appendix A below for instructions on how to do this if you need to.
 </p>
 
 ## Step 3. Running the application CSV2DCC
 
 <p align="justify">
-Now we are ready to use CSV2DCC. If you haven't done so already, please follow the instructions in Appendix B to install the application on a Windows PC.
+Now we are ready to use CSV2DCC. If you haven't done so already, please follow the instructions in the Releases section of this repository (???).
 </p>
 
 <p align="justify">
@@ -258,6 +258,28 @@ Although many metrology practitioners use a spreadsheet to process raw data to c
 You may instead use custom software to generate your results. If this is the case, in principle it is possible to add functionality to a custom implementation to output a CSV file. Please contact your local software engineer or provider to discuss this option.  This document should provide the developer with enough information to implement the necessary additional functionality to output a CSV file containing the relevant information. 
 </p>
 
+## Appendix A How to export Semicolon separated variables in Excel
+
+<p align="justify">
+<b>Note:-</b> This will change the way numbers are presented in the spreadsheet cells.
+</p>
+
+<ol>
+  <li>Within Excel navigate to the "Excel  Options" screen</li>
+  <li>Click on "Advanced"</li>
+  <li>Under "Editing Options"
+    <ol>
+      <li>Uncheck the "Use System Separators" check box</li>
+      <li>In the "Decimal separator" text box put a "," (i.e. a single comma)</li>
+      <li>In the "Thousands separator" text box put a "." (i.e. a single full-stop)</li>
+    </ol>
+  </li>
+</ol>
+
+
+<p align="justify">
+Now when you output to a csv file, semi-colon separators will be used.
+</p>
 
 
 
