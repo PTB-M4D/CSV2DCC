@@ -20,5 +20,5 @@ jobs:
       - name: Publish msi artifact
         uses: actions/upload-artifact@v2
         with:
-          name: setup
+          name: CSV2DCC.msi.zip
           path: ${{ github.workspace }}\CSV2DCC.msi
