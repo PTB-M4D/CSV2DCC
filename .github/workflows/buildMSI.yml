@@ -1,0 +1,25 @@
+name: Build CSV2DCC (.MSI)
+on: [workflow_dispatch]
+jobs:
+  build_csv2dcc_msi:
+    runs-on: windows-latest
+    name: Build CSV2DCC.msi
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Build AIP
+        uses: caphyon/advinst-github-action@v1.0
+        with:
+          advinst-version: '19.0'
+          advinst-enable-automation: 'true'
+          aip-path: ${{ github.workspace }}\CSV2DCC.aip
+          aip-build-name: DefaultBuild
+          aip-package-name: CSV2DCC.msi
+          aip-output-dir:  ${{ github.workspace }}
+          aip-commands: |
+            SetVersion 0.1.1
+      - name: Publish msi artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: setup
+          path: ${{ github.workspace }}\CSV2DCC.msi
