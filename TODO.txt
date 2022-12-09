@@ -5,3 +5,4 @@ TODO FIle
  3.[] Fix alignment of on screen output debug
  4.[] Add the User Guide to the main CSV2DCC screen
  5.[] Add the licence text to the main CSV2DCC screen
+ 6.[] Add VERSION file containing current version. Read this in and display on GUI
